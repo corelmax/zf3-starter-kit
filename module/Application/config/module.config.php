@@ -29,6 +29,23 @@ return array(
                     ),
                 ),
             ),
+            'map' => array(
+                'type' => 'Segment',
+                'options' => array(
+                    'route'    => '/map/[:lang/[:action[/][:id/]]]',
+                    'constraints' => array(
+                        'lang'   => '[a-zA-Z]*',
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id' => '[0-9_-]*[a-zA-Z0-9_-]*',
+                    ),
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Map',
+                        'action' => 'index',
+                        'id' => '',
+                        'lang' => 'th',
+                    ),
+                ),
+            ),
             /*
             'xxx' => array(
                 'type' => 'Segment',
@@ -73,6 +90,7 @@ return array(
             //add controller
             'Application\Controller\Index' => 'Application\Controller\IndexController',
             //'Application\Controller\Xxx' => 'Application\Controller\XxxController',
+            'Application\Controller\Map' => 'Application\Controller\MapController'
         ),
     ),
      
@@ -83,6 +101,9 @@ return array(
             #index
             'application/index/index' => __DIR__ . '/../view/index/index.phtml',
             'application/index/user' => __DIR__ . '/../view/index/user.phtml',
+            #map
+            'application/map/index' => __DIR__ . '/../view/map/index.phtml',
+            'application/map/poke' => __DIR__ . '/../view/map/poke.phtml',
             #layout
             'layout/layout' => __DIR__ . '/../view/layout/layout.phtml',
 			#404

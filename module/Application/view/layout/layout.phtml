@@ -57,7 +57,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js" defer></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrVz_QvgINbLG0ZutyR7OV5tcm79gnQ4U&libraries=places"></script>
         <script src="<?php echo $this->url('home'); ?>js/myJS.js" onLoad="init();" defer></script>
+        <?php echo $this->inlineScript(); ?>
     </body>
 </html>
-<?php echo $this->inlineScript(); ?>

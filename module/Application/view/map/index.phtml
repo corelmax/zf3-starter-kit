@@ -1,0 +1,16 @@
+<div class="container" style="margin-top:10px;">
+    <div id="map"></div>
+</div>
+
+<?php
+$this->inlineScript()->captureStart();
+echo <<<JS
+    window.GOOGLE_API_KEY = '${google_api_key}';
+JS;
+echo <<<JS
+    window.onload = function() {
+        $("document").ready(function() { mapIndexInit(); })
+    }
+JS;
+$this->inlineScript()->captureEnd();
+?>
