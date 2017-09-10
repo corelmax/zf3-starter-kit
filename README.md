@@ -1,4 +1,7 @@
 # How to make it work?
+## Get started
+http://localhost/map/
+
 ## simply use docker
     git clone https://bitbucket.org/Tonytoons/zf3-starter-kit.git && cd zf3-starter-kit
     git fetch && git checkout bigdevs
