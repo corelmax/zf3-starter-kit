@@ -53,7 +53,7 @@ class MapController extends AbstractActionController {
     public function pokeAction() {
         $contents = '<h2>Hi! Someone send this place to you!</h2>';
         $contents .= base64_decode($this->params()->fromPost('contents'));
-        $contents .= "<p>and I also sent you my git url: https://bitbucket.org/Tonytoons/zf3-starter-kit.git Yes! it's your. Please check it out at branch 'bigdevs'. Not found it? please also check <b>pull request</b>. Thanks</p>";
+        $contents .= "<p>and I also sent you my git url: https://github.com/corelmax/zf3-starter-kit.git ,Thanks</p>";
         
         $mail = new PHPMailer;
         $mail->isSMTP();
@@ -66,7 +66,7 @@ class MapController extends AbstractActionController {
 
         $mail->From = $this->mconfig['default_from_mail'];
         $mail->FromName = $this->mconfig['default_from_name'];
-        $mail->addAddress('corelmax@gmail.com');
+        $mail->addAddress('Tony@gpsn.co.th');
         $mail->Subject = 'This is poke! from @bigdevs';
         $mail->Body = $contents;
         if(!$mail->send()) {
